@@ -136,3 +136,6 @@ This repository is a runnable demonstration framework, not a production clinical
 
 **Only include this resume entry after you have run the project, reviewed the code, and can explain each component in an interview.**
 Automated CI testing with Jenkins and Selenium.
+git add README.md
+git commit -m "Test automatic Jenkins trigger"
+git push origin main
