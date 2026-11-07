@@ -135,3 +135,4 @@ This repository is a runnable demonstration framework, not a production clinical
 - Configured a GitHub Actions workflow to execute headless browser tests and publish reports as build artifacts.
 
 **Only include this resume entry after you have run the project, reviewed the code, and can explain each component in an interview.**
+Automated CI testing with Jenkins and Selenium.
