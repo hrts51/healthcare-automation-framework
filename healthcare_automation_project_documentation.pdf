@@ -1,1 +1,383 @@
-PDF binary upload requires a binary-capable handoff; this is a text-only contents API.
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R 8 0 R 10 0 R 12 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2214 >>
+stream
+BT
+/F1 8.5 Tf
+48 752 Td
+11.5 TL
+(Healthcare Management System Automation Framework) Tj
+T*
+(Project Documentation - Page 1 of 5) Tj
+T*
+T*
+(            Healthcare Management System Automation Framework PROJECT DOCUMENTATION Java |) Tj
+T*
+(            Selenium WebDriver | Cucumber BDD | JUnit | Maven | Jenkins | GitHub 1. Project) Tj
+T*
+(            Overview The Healthcare Management System Automation Framework is an end-to-end UI) Tj
+T*
+(            test automation project for important workflows in a healthcare management) Tj
+T*
+(            application. It uses Java and Selenium WebDriver for browser automation, Cucumber) Tj
+T*
+(            BDD for readable scenarios, JUnit for test execution, and Maven for build and) Tj
+T*
+(            dependency management. Jenkins is integrated with the GitHub repository. A code) Tj
+T*
+(            change was pushed and a new Jenkins build was observed. The test target is a locally) Tj
+T*
+(            hosted healthcare demo application called CarePoint. Objectives - Automate) Tj
+T*
+(            healthcare application workflows. - Validate authentication and user access. - Test) Tj
+T*
+(            patient registration and appointment management. - Build reusable automation) Tj
+T*
+(            components. - Generate readable test reports. - Integrate test execution with CI. 2.) Tj
+T*
+(            Technology Stack Technology Purpose Java 17 Automation programming language Selenium) Tj
+T*
+(            WebDriver 4.25.0 Browser automation Cucumber 7.20.1 Behaviour-Driven Development) Tj
+T*
+(            JUnit 4.13.2 Test execution Maven 3.10.0 Build and dependency management Jenkins) Tj
+T*
+(            2.589 Continuous Integration Git and GitHub Version control and source repository) Tj
+T*
+(            GitHub Webhooks Build triggering HTML Publisher Publishing HTML reports Runtime) Tj
+T*
+(            note: the automation project uses Java 17; Jenkins itself runs using Java 21. These) Tj
+T*
+(            are separate runtime configurations. 3. Project Architecture The framework follows a) Tj
+T*
+(            layered structure based on the Page Object Model \(POM\).Healthcare Management System) Tj
+T*
+(            Automation Framework Page 1) Tj
+T*
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 2280 >>
+stream
+BT
+/F1 8.5 Tf
+48 752 Td
+11.5 TL
+(Healthcare Management System Automation Framework) Tj
+T*
+(Project Documentation - Page 2 of 5) Tj
+T*
+T*
+(   - Feature layer: human-readable Cucumber scenarios. - Step definition layer: connects Gherkin) Tj
+T*
+(   steps to Java methods. - Page object layer: page-specific locators and browser interactions.) Tj
+T*
+(   - Driver layer: manages Selenium WebDriver creation and configuration. - Hooks layer: setup) Tj
+T*
+(   and cleanup around scenarios. - Configuration layer: application and test configuration. -) Tj
+T*
+(   Reporting layer: Cucumber HTML, JSON and XML reports. - CI layer: Jenkins executes Maven) Tj
+T*
+(   tests and publishes reports. Execution flow GitHub push -> webhook/SCM trigger -> Jenkins ->) Tj
+T*
+(   Maven -> JUnit/Cucumber -> Selenium WebDriver -> CarePoint -> test results -> r 4. Project) Tj
+T*
+(   Directory Structure healthcare-automation-framework/ app/demo/index.html docs/TEST-PLAN.md) Tj
+T*
+(   scripts/run-local.sh scripts/run-tests.sh src/test/java/com/healthcare/) Tj
+T*
+(   config/ConfigReader.java driver/DriverFactory.java hooks/Hooks.java pages/) Tj
+T*
+(   AppointmentsPage.java BasePage.java DashboardPage.java LoginPage.java PatientsPage.java) Tj
+T*
+(   runner/RunCucumberTest.java steps/HealthcareSteps.java utils/WaitUtils.java) Tj
+T*
+(   src/test/resources/ config/config.properties features/ appointment-management.feature) Tj
+T*
+(   authentication.feature patient-management.feature session.feature testdata/users.properties) Tj
+T*
+(   .github/workflows/ui-tests.yml reports/ .gitignore pom.xml README.md 5. Functional Test) Tj
+T*
+(   Scenarios Scenario Purpose Admin login Verify administrator authentication and dashboard) Tj
+T*
+(   navigation. Staff login Verify staff authentication. Invalid login Verify incorrect) Tj
+T*
+(   credentials are rejected. Patient registration Verify patient registration workflow.) Tj
+T*
+(   Appointment booking Verify appointment booking workflow. Logout Verify an authenticated user) Tj
+T*
+(   can end a session. Observed result: six scenarios passed in successful test executions. This) Tj
+T*
+(   is a demonstration test suite, not evidence of production healthcare system) Tj
+T*
+(   validation.Healthcare Management System Automation Framework Page 2) Tj
+T*
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 2453 >>
+stream
+BT
+/F1 8.5 Tf
+48 752 Td
+11.5 TL
+(Healthcare Management System Automation Framework) Tj
+T*
+(Project Documentation - Page 3 of 5) Tj
+T*
+T*
+( 6. Page Object Model The framework separates page-specific browser interactions from test) Tj
+T*
+( scenarios. - LoginPage.java - login page actions and elements. - DashboardPage.java - dashboard) Tj
+T*
+( interactions. - PatientsPage.java - patient management interactions. - AppointmentsPage.java -) Tj
+T*
+( appointment management interactions. - BasePage.java - common page-level functionality.) Tj
+T*
+( Benefits include reduced duplicated Selenium code, separation of locators from workflows,) Tj
+T*
+( easier maintenance, improved readability and support for additional workflows. 7. Cucumber BDD) Tj
+T*
+( Cucumber allows test scenarios to be written in Gherkin syntax. Java step definitions connect) Tj
+T*
+( the readable steps to Selenium operations. Feature: Healthcare user authentication Scenario:) Tj
+T*
+( Admin logs in successfully Given the user opens the healthcare application When the admin) Tj
+T*
+( enters valid credentials And the admin clicks the login button Then the admin should see the) Tj
+T*
+( dashboard Benefits include readable scenarios, separation of business behaviour from) Tj
+T*
+( implementation, and improved test documentation. 8. Maven and Local Application Maven manages) Tj
+T*
+( dependencies and test execution. The project uses Selenium Java 4.25.0, Cucumber 7.20.1,) Tj
+T*
+( Cucumber JUnit 7.20.1 and JUnit 4.13.2. Run tests locally mvn clean test Start the local) Tj
+T*
+( CarePoint demo application python -m http.server 8080 --directory app/demo Application URL:) Tj
+T*
+( http://localhost:8080. Keep the local server running in a separate terminal while executing) Tj
+T*
+( Selenium tests. 9. Jenkins CI Integration A Jenkins Freestyle job named) Tj
+T*
+( Healthcare-Automation-Framework was configured. Jenkins is available locally at) Tj
+T*
+( http://localhost:8081. - Configured Java 21 as the Jenkins runtime. - Configured Maven as a) Tj
+T*
+( Jenkins build tool. - Configured a Windows batch build step to run mvn clean test. - Copied) Tj
+T*
+( generated reports into the Jenkins workspace. - Configured HTML Publisher to publish the) Tj
+T*
+( report. HTML Publisher configuration Setting Value HTML directory to archive reports Index page) Tj
+T*
+( index.html Report title Healthcare Cucumber Test ReportHealthcare Management System Automation) Tj
+T*
+( Framework Page 3) Tj
+T*
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 3519 >>
+stream
+BT
+/F1 8.5 Tf
+48 752 Td
+11.5 TL
+(Healthcare Management System Automation Framework) Tj
+T*
+(Project Documentation - Page 4 of 5) Tj
+T*
+T*
+( Troubleshooting achievement Cucumber reports were initially generated in the local project) Tj
+T*
+( directory while HTML Publisher searched in the Jenkins workspace. This caused publishing to) Tj
+T*
+( fail despite successful test execution. The build script was updated to copy HTML, JSON and XML) Tj
+T*
+( reports into %WORKSPACE%\\reports before publishing. This resolved the directory mismatch. 10.) Tj
+T*
+( Cucumber Reporting The Cucumber runner generates console output and HTML, JSON and JUnit XML) Tj
+T*
+( reports. plugin = { "pretty", "html:reports/cucumber.html", "json:reports/cucumber.json",) Tj
+T*
+( "junit:reports/cucumber.xml" } - HTML: human-readable scenario and feature results. - JSON:) Tj
+T*
+( structured results for downstream reporting integrations. - XML: JUnit-compatible results for) Tj
+T*
+( CI integrations. The HTML report is copied to index.html in the Jenkins workspace for) Tj
+T*
+( publication. 11. GitHub and Automatic Build Triggering The project was initialized as a Git) Tj
+T*
+( repository, committed and pushed to GitHub:) Tj
+T*
+( https://github.com/hrts51/healthcare-automation-framework git init git add . git commit -m) Tj
+T*
+( "Initial commit - Healthcare Automation Framework" git branch -M main git remote add origin) Tj
+T*
+( https://github.com/hrts51/healthcare-automation-framework.git git push -u origin main Jenkins) Tj
+T*
+( was configured with the repository URL, branch specifier */main, and GitHub hook trigger for) Tj
+T*
+( GITScm polling. A README change was committed and pushed; a new Jenkins build appeared without) Tj
+T*
+( manually selecting Build Now. Verification caveat: the GitHub webhook page previously displayed) Tj
+T*
+( a connection warning for a placeholder public URL. The observed automatic build confirms that a) Tj
+T*
+( trigger path worked, but the exact webhook delivery configuration should still be checked) Tj
+T*
+( before claiming every delivery is successful. 12. What Makes This Implementation Stand Out?) Tj
+T*
+( Project-specific differentiators - Healthcare-oriented workflows rather than only a generic) Tj
+T*
+( login demonstration. - A locally hosted CarePoint demo application used as a controllable test) Tj
+T*
+( target. - Separate Java runtimes: Java 17 for the test project and Java 21 for Jenkins. - A) Tj
+T*
+( practical Jenkins workspace/report-directory mismatch diagnosed and fixed by copying report) Tj
+T*
+( files before publication. - An integrated GitHub-to-Jenkins workflow where a repository change) Tj
+T*
+( was followed by a new Jenkins build. - Multiple report formats-HTML, JSON and XML-from the same) Tj
+T*
+( Cucumber execution. - Separate local ports: CarePoint on 8080 and Jenkins on 8081. These are) Tj
+T*
+( implementation differentiators, not claims that the underlying technologies or techniques are) Tj
+T*
+( globally unique. The value is in combining and troubleshooting them into a working project. 13.) Tj
+T*
+( Known Limitations and Accuracy Notes - The target is a local demo application, not a real) Tj
+T*
+( healthcare provider system. - The current suite contains six scenarios and should be expanded.) Tj
+T*
+( - The local application server must be running for UI tests. - The Jenkins job currently) Tj
+T*
+( depends on a local project directory. - The webhook delivery configuration should be) Tj
+T*
+( verified.Healthcare Management System Automation Framework Page 4) Tj
+T*
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 3182 >>
+stream
+BT
+/F1 8.5 Tf
+48 752 Td
+11.5 TL
+(Healthcare Management System Automation Framework) Tj
+T*
+(Project Documentation - Page 5 of 5) Tj
+T*
+T*
+(   - The .github/workflows/ui-tests.yml file exists, but a successful GitHub Actions execution) Tj
+T*
+(   has not been established. - No production patient data or real medical records are involved.) Tj
+T*
+(   - Production security, performance, accessibility and API testing have not been established) Tj
+T*
+(   as implemented. 14. Recommended Future Improvements - Move Jenkins from the local Downloads) Tj
+T*
+(   path to a Pipeline job that checks out the repository. - Make Jenkins start and stop the) Tj
+T*
+(   CarePoint test application automatically. - Capture screenshots on test failure. - Expand) Tj
+T*
+(   negative, boundary and role-based scenarios. - Add patient search, update and appointment) Tj
+T*
+(   cancellation tests. - Add test data management and cleanup. - Add execution history and trend) Tj
+T*
+(   reporting. - Verify and document webhook deliveries. - Validate GitHub Actions separately if) Tj
+T*
+(   it is to be included as a project feature. - Add API testing and database validation when a) Tj
+T*
+(   suitable test environment is available. - Improve logging and failure diagnostics. 15.) Tj
+T*
+(   Resume-Ready Project Summary Healthcare Management System - Test Automation Framework Java |) Tj
+T*
+(   Selenium WebDriver | Cucumber BDD | JUnit | Maven | Jenkins | GitHub - Developed a healthcare) Tj
+T*
+(   UI automation framework using Java, Selenium WebDriver and Cucumber BDD, covering six) Tj
+T*
+(   scenarios across authentication, patient registration, appointment booking and logout. -) Tj
+T*
+(   Implemented Page Object Model with reusable page, driver, configuration and test utility) Tj
+T*
+(   components. - Integrated Jenkins with GitHub to automate Maven test execution following) Tj
+T*
+(   repository changes. - Configured Cucumber HTML, JSON and XML reporting and resolved Jenkins) Tj
+T*
+(   workspace report-publishing issues through automated report copying. 16. Interview) Tj
+T*
+(   Explanation "I developed a Healthcare Management System Automation Framework using Java,) Tj
+T*
+(   Selenium WebDriver, Cucumber BDD, JUnit and Maven. I automated important workflows such as) Tj
+T*
+(   admin and staff login, invalid login validation, patient registration, appointment booking) Tj
+T*
+(   and logout. I followed the Page Object Model to make the framework reusable and maintainable.) Tj
+T*
+(   I then integrated the project with Jenkins and GitHub. When code is pushed to GitHub, Jenkins) Tj
+T*
+(   can trigger a new build and execute the Maven test suite. One practical challenge I solved) Tj
+T*
+(   was Jenkins report publishing. My Cucumber reports were generated in the project directory,) Tj
+T*
+(   but Jenkins HTML Publisher expected them in its workspace. I updated the build process to) Tj
+T*
+(   copy the report files into the workspace before publishing them. This project helped me gain) Tj
+T*
+(   practical experience in UI automation, BDD, version control, CI integration, test reporting) Tj
+T*
+(   and troubleshooting."Healthcare Management System Automation Framework Page 5) Tj
+T*
+ET
+endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000141 00000 n 
+0000000211 00000 n 
+0000000337 00000 n 
+0000002603 00000 n 
+0000002729 00000 n 
+0000005061 00000 n 
+0000005187 00000 n 
+0000007692 00000 n 
+0000007820 00000 n 
+0000011392 00000 n 
+0000011520 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R >>
+startxref
+14755
+%%EOF
